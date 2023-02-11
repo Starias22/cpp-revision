@@ -1,17 +1,17 @@
-# Hello world
+# Hello, world!
 
 ### Overview
 
 This is our first C++ programm, a programm to get started with C++ programming languague. It is the basic C++ programm that just prints the message "Hello, world!" to the console output.
 
-copy paste the content of the [ hello_world file ](https://github.com/Starias22/cpp-revision/tree/main/basics/hello_world/ "Hello world programm")  and follow the instructions above to run it.
+copy paste the content of the [ hello_world file ](https://github.com/Starias22/cpp-revision/blob/main/basics/hello_world/hello_world.cpp "Hello world programm")  and follow the instructions above to run it.
 
 ### Run the programm
 To run that programm, if you have g++ installed, you need to follow two steps
 
 1. The first step is to run the following command:
 ````bash
-    g++ hello_world.cpp -o exe.o
+g++ hello_world.cpp -o exe.o
 ````
 by replacing hello_world.cpp by your filename.
 That step is called the compiling step.
@@ -21,9 +21,14 @@ That's called the executable file or simply the exucutable. The next step will b
 
 2. Now run the following command:
 ````bash
-     ./exe.o
+./exe.o
 ````
 where exe.o is the name you've given to you executable above.
+
+You will obtain the following output:
+
+````Hello, world!````
+
 
 ### Explanation
 
@@ -34,7 +39,7 @@ Let's explain that programm
 ```C++
 #include<iostream>
 ````
-That is the first line of our programm. It is called a *preprocessor directive*. 'iostream' stands for 'input output stream' and contains all the neccessary functions to write too the console and to read from the console.
+That is the first line of our programm. It is called a *preprocessor directive*. 'iostream' stands for 'input output stream' and contains all the neccessary functions and objects to perform input and output operations, such as printing to the console using cout.
 
 #### The main function
 
@@ -50,14 +55,16 @@ That is the main function of our program. It consits the entry point of the prog
 
 #### cout
 ````C++
-    std::cout<<"Hello, world!";
+std::cout<<"Hello, world!";
 ````
-That line is the one which allows us to print the "Hello,world" message to the console own to the 'cout' method which is defined in the *namespace* 'std'.'<<' is an operator of stream
+That line is the one which allows us to print the "Hello,world" message to the console own to the 'cout' method which is defined in the *namespace* ````std````.````<<```` is an operator of stream. It is an instruction and terminates with semiclon(;).
+
+cout stands for console output
 
 #### return
 
 ````C++
-    return 0;
+return 0;
 ````
 That line just allows the main function of our programm to return 0 so as to notify everything has been okay. In case of an error, the main function should return a non null integer.
 Let us notify we can use another integer value such as 1, 5, etc.
@@ -69,3 +76,4 @@ echo $1
 * The C++ programming language as all programming languages is not understood by computers. So to run a C++ programm, we first of all need to compile it using a C++ compiler such as g++. At that step, our code is analised and we get notified of  the eventual errors. In case of success, we get a binary file, a bytecode, also called a machine code, or excutable which is understood by our computers. We can then execute that code to get the attended result.
 * The main function is the entry point of any C++ programm.
 * The cout function contained in the standard namespace  std, that is defined in the iostream library allows us to print message to the console using the operator '<<'.
+*An instruction in C++ is a line of code that ends with a semicolon(;) and order the computer to do a specific action.
