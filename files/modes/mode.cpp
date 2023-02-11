@@ -2,16 +2,15 @@
 #include<iostream>
 
 using namespace std;
-
-
 int main()
 {
+    //in,out,trunc,app
 //6opnemodes
      /*
-       read-> ios.in
-       append->
-       write->
-       truncate->
+       read-> ios::in
+       append->ios::app
+       write->ios::
+       truncate->ios::trun
        no replace->
        no create->
 

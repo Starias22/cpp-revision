@@ -1,0 +1,8 @@
+This is a   string
+Another string
+
+
+
+20
+I hate you
+15.20

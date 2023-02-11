@@ -4,7 +4,8 @@
 using namespace std;
 
 int main()
-{   //open the file if exists, else create it and open
+{  //ofstream ifstream fstream
+     //open the file if exists, else create it and open
     ofstream file("file.txt");
 
     if(file)// if success
