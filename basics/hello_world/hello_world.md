@@ -2,9 +2,9 @@
 
 ### Overview
 
-This is our first c++ programm, a programm to get started with c++ programming languague. It is the basic c++ programm that just prints the message "Hello, world!" to the console output.
+This is our first C++ programm, a programm to get started with C++ programming languague. It is the basic C++ programm that just prints the message "Hello, world!" to the console output.
 
-copy paste the content of the hello_word file and follow the instructions above to run it
+copy paste the content of the [ hello_world file ](https://github.com/Starias22/cpp-revision/tree/main/basics/hello_world/ "Hello world programm")  and follow the instructions above to run it.
 
 ### Run the programm
 To run that programm, if you have g++ installed, you need to follow two steps
@@ -47,17 +47,25 @@ int main()
 ````
 
 That is the main function of our program. It consits the entry point of the programm.It consits of two lines.
+
+#### cout
 ````C++
     std::cout<<"Hello, world!";
 ````
-That line is the one which allows us to print the "Hello,world" message to the console own to the 'cout' method which is defined in the *namespace* 'std'.
+That line is the one which allows us to print the "Hello,world" message to the console own to the 'cout' method which is defined in the *namespace* 'std'.'<<' is an operator of stream
+
+#### return
 
 ````C++
     return 0;
 ````
 That line just allows the main function of our programm to return 0 so as to notify everything has been okay. In case of an error, the main function should return a non null integer.
-Let us notify we can use nother integer value such as 1, 5, etc.
+Let us notify we can use another integer value such as 1, 5, etc.
 
 echo $1
 
 ## Resume
+
+* The C++ programming language as all programming languages is not understood by computers. So to run a C++ programm, we first of all need to compile it using a C++ compiler such as g++. At that step, our code is analised and we get notified of  the eventual errors. In case of success, we get a binary file, a bytecode, also called a machine code, or excutable which is understood by our computers. We can then execute that code to get the attended result.
+* The main function is the entry point of any C++ programm.
+* The cout function contained in the standard namespace  std, that is defined in the iostream library allows us to print message to the console using the operator '<<'.
