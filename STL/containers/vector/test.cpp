@@ -184,7 +184,7 @@ int main()
          cout<<"dff"<<vect.size()<<endl;
          auto its=vect.begin()+1;
          display(vect);
-          
+
           vect.insert(its,2);
           display(vect);
 
