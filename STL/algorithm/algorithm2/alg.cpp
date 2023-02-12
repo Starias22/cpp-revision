@@ -108,6 +108,8 @@ int main()
     accumulate(tab.begin(),tab.end(),0,multiplies<double>());
     auto its=j;
     merge(tab.begin(),tab.end(),tab.begin(),tab.end(),its);
+    auto out=j;
+    copy(tab.begin(),tab.end(),out);
 
 
     return 0;
