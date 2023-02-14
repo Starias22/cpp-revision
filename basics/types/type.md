@@ -11,7 +11,7 @@ The C++ programming language proposes saveral basic data types. The main are men
 |````int````|integers|1, 10589, -20|4|
 |````short````|short integers|2, 9, 569|2|
 |````char````|single characters|'A', 'a', '%', '9'|1|
-|````bool````|boolean values|true, flase|2|
+|````bool````|boolean values|true, false|1|
 |````float````|floating numbers|3, 8.8, 9.0, -8.558|4|
 |````long````|larger integers|20,156987456,-963214|4 or 8|
 |````long long````|larger bigger floating numbers with more precision|20,156987456,-963214|8|
