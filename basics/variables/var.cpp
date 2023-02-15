@@ -89,6 +89,7 @@ ascii='0';
     cout<<"typeid(double).name(): "<<typeid(double).name()<<endl;
     cout<<"typeid(int).name(): "<<typeid(int).name()<<endl;
     cout<<"typeid(float).name(): "<<typeid(float).name()<<endl;
+
     //in so one
 
 
@@ -99,6 +100,7 @@ ascii='0';
         cout<<"6897.56f: "<<typeid(6897.56f).name()<<endl;
         ln=8974L;
         f=78.f;
+        //float t=55.d;
 
 
 
@@ -134,7 +136,7 @@ ascii='0';
 
 
 
-
+        auto pp=78Ull;
 
 
         return 0;

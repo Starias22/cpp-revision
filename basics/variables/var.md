@@ -1,11 +1,11 @@
 # Variables in C++
 
 ### Overview
- we will learn variables  in C++ programming language.
+ We will learn variables  in C++ programming language.
 
 
 ### Variables
-In any programming language, a variable is the identifier, the name of a memory space, a memory area of the computer, intended to store information during the execution of a program. In C++ language, this information, called the value of the variable, has a specific type. It can be one of the built-in type we learned in the previous chapter(````int````, ````float````, ````double````, ````bool````,  etc) or much more. The information('s value) can change during the execution of the programm but it's type cannot change. Thus, C++ is said to be a statically typed language, meaning that the variable type cannot change during the execution of the programm, contrary to dynamically typed language such as Python where variables can change their type during the execution of the program.
+In any programming language, a variable is the identifier, the name of a memory space, a memory area of the computer, intended to store an information during the execution of a program. In C++ language, this information, called the value of the variable, has a specific type. It can be one of the built-in type we learned in the previous chapter(````int````, ````float````, ````double````, ````bool````,  etc) or much more. The information('s value) can change during the execution of the programm but it's type cannot change. Thus, C++ is said to be a statically typed language, meaning that the variable type cannot change during the execution of the programm, contrary to dynamically typed language such as Python where variables can change their type during the execution of the program.
 
 ### Declaration of variable in C++
 To declare a variable in C++, we just need to precise it's type and it identifier(name), followed by semicolon(````;````).
@@ -57,10 +57,188 @@ letsgo
 |````AMPar1-````|````-```` is a special character|
 |````int````| reserved word|
 |````unsigned````| reserved word|
+#### Variable initialization and value assignment to variable
+Variable initialization consists in assigning value to a variable the first time after it declaration;
 
+We can also change the value of a variable: that's called value re-assignment to  variable or value assignment to  variable
+#### Examples
+````C++
+int main()
+{
+int age;/*declaration of an integer variable*/
+
+    /*output the variable, just created*/
+    cout<<"age="<<age<<endl;
+    //initialization of age
+    age=28;
+    //output
+    cout<<"age="<<age<<endl;
+    /*the variable tail is created and initialized at the same time*/
+    float tail=1.897;
+    cout<<"I'm "<<tail<<" meters long\n";
+    //re-assignment of age
+    age=89;
+    cout<<"age="<<age<<endl;
+    //declaration of a
+    int a=85;
+   //assignment of the value of a, to age
+    age=a;
+    cout<<"age="<<age<<endl;
+    double price=1568254.457;
+    cout<<"The jacket costs $"<<price<<endl;
+    bool am_good=true;
+    cout<<"I'm I good? "<<am_good<<endl;
+    cout<<boolalpha<<am_good<<end;
+    am_good=false
+    cout<<"I'm I good? "<<am_good<<endl;
+    cout<<noboolalpha;
+    cout<<"I'm I good? "<<am_good<<endl;
+    char gender='M';
+    cout<<"gender:"<<gender<<endl;
+    return 0;
+}
+````
+
+When variables have the same type, they can be declrared as follow:
+````C++
+int main()
+{
+    /*declaration of 2 integers
+     without initialization*/
+    int a,b;
+    /* short integers:
+    x, y and z2 are initialized
+    z is not initialized
+    */
+    cout<<"int variables\n";
+    cout<<"a:"<<a<<endl;
+    cout<<"b:"<<b<<endl;
+    short x=15,y=9,z,z2=88;
+    /*
+   float variables e and f declared
+   only f is initialized
+
+    */
+    float e,f=5.56;
+
+    cout<<"float variables\n";
+    cout<<"e:"<<a<<endl;
+    cout<<"f:"<<a<<endl;
+
+    cout<<"short variables\n";
+    cout<<"x:"<<a<<endl;
+    cout<<"y:"<<a<<endl;
+    cout<<"z:"<<a<<endl;
+
+
+    return 0;
+}
+````
+
+### Size occupied by a variable
+Everytime a program creates a variable, the computer allocates a memory. The memory allocated for each variable depends on it type.
+
+We talked about the size occupied by each type of variable, at least for most of the built-in types, in the previous lesson.
+
+C++ programming language proposes an operator to get in bytes, the size allocated to a variable, for a type, or a value if it where assigned to a variable. This is the ````sizeof```` operator.
+#### Examples of usage
+````C++
+int main()
+{
+int var;
+cout<<"var occupies "<<sizeof(var)<<"bytes in memory\n";
+cout<<"int variables occupy "<<sizeof(int)<<"bytes in memory\n";
+bool val=true;
+cout<<"val occupies "<<sizeof(val)<<"bytes in memory\n";
+cout<<"'A' will occupy "<<sizeof('A')<<"bytes in memory\n";
+cout<<"long double variables occupy "<<sizeof(long double)<<"bytes in memory\n";
+long long x;
+cout<<"x occupies "<<sizeof(x)<<"bytes in memory\n";
+
+cout<<true<<" will occupy "<<sizeof(true)<<"bytes in memory\n";
+return 0;
+}
+````
+
+### Range of values: Type representation in memory, overflow
+Each type in C++ supports a range of value, determined by the size occupied that type in memory.
+### Get the type of a variable
+It could be sometimes necessary to check briefly the type of a variable in C++. The way to do it is similar to the one used with the ````sizeof```` operator, meaning that we can get the typename of a value, a variable, or a type keyword.
+#### Examples
+````C++
+int main()
+{
+    char ch;
+    int age;
+    float f;
+/* *This initialization is optional*/
+    bool am_good=true;
+    cout<<"typeid(ch).name(): "<<typeid(ch).name()<<endl;
+    cout<<"typeid(age).name(): "<<typeid(age).name()<<endl;
+    cout<<"typeid(am_good).name(): "<<typeid(am_good).name()<<endl;
+    cout<<"typeid(f).name(): "<<typeid(f).name()<<endl;
+    short sh;
+    cout<<"typeid(sh).name(): "<<typeid(sh).name()<<endl;
+    long ln;
+    cout<<"typeid(ln).name(): "<<typeid(ln).name()<<endl;
+    cout<<"typeid(int).name(): "<<typeid(int).name()<<endl;
+
+    cout<<"typeid(double).name(): "<<typeid(double).name()<<endl;
+
+    cout<<"typeid(float).name(): "<<typeid(float).name()<<endl;
+
+    cout<<"6: "<<typeid(6).name()<<endl;
+    return 0;
+}
+````
+
+
+### Type deduction in C++
+C++ proposes a mechanism to deduce the type of a value. This is the use of the ````auto```` keyword. We may not know the type of a value, or much more, we want to assign to a variable. All we need to do is to declare the variable using the ````auto````  keyword followed  by the name of the variable, and it value.
+
+ Let's reiterate that we should necessary assign a value to the variable at the same time as it declaration.
+
+As a variable, we can re-assign the variables declared with the ````auto````  keyword, but we need the new value be compatible with the one assigned during declaration because C++ is not dinamically typed.
+
+#### Examples on type deduction
+````C++
+int main()
+{
+    auto val=102;
+    cout<<"val: "<<val<<endl;
+    cout<<"typeid(val).name"<<typeid(val).name<<endl;
+    val=4;
+    cout<<"val: "<<val<<endl;
+    auto x=true;
+    auto y=456987455789458;
+    cout<<"x: "<<val<<endl;
+     cout<<"typeid(x).name"<<typeid(x).name<<endl;
+
+     cout<<"y: "<<val<<endl;
+     cout<<"typeid(y).name"<<typeid(y).name<<endl;
+     //a double
+     auto flt=45.8;
+     cout<<"flt: "<<val<<endl;
+     cout<<"typeid(flt).name"<<typeid(flt).name<<endl;
+     //auto p;//error
+    return 0;
+}
+````
+### Unsigned qualifier or modifier
+
+### Type suffixes
+
+| Suffix |     Meaning                          |
+| ------ | --------------------------- |
+| ````F```` or ````f````  | Single-precision floating-point number |
+| ````U```` or ````u````    | Unsigned integer            |
+| ````L```` or ````l````    | Long integer                |
+| ````UL```` or ````ul```` or ````uL```` or ````Ul````| Unsigned long integer       |
+| ````LL```` or ````ll````  | Long long integer           |
+| ````ULL```` or ````Ull```` or ````ull```` or ````uLL```` | Unsigned long long integer  |
+#### Examples
 
 
 
 ## Resume
 
- C++ programming languages has several built-in types that allow to use integers,floating numbers, booleans, characters.
