@@ -1,10 +1,11 @@
 # Basic data types in C++
 
-### Overview
+## Overview
+
  we will learn the available data types  in C++ programming language.
 
+## Built-in data types in C++
 
-### Built-in data types in C++
 The C++ programming language proposes saveral basic data types. The main are mentioned in the table below.
 |Type|Meaning|Examples| Size(in bytes)|
 |----|-------|--------|-|
@@ -19,7 +20,8 @@ The C++ programming language proposes saveral basic data types. The main are men
 |````long double````|even large integers|20,15.6987456,-96.3214|10 or 12|
 |````void````|absence of value|||
 
-#### Examples
+## Examples
+
 ````C++
 #include<iostream>
 using namespace std;
@@ -47,7 +49,6 @@ int main()
     return 0;
 }
 ````
-
 
 ## Resume
 

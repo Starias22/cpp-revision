@@ -130,13 +130,23 @@ ascii='0';
 
     auto val=66.f;
     cout<<"val:"<<typeid(val).name()<<endl;
+            auto pp=78Ull;
+
+
+int min_int=-2147483648;
+int max_int=2147483647;
+cout<<"min_int: "<<min_int<<endl;
+cout<<"max_int: "<<max_int<<endl;
+cout<<"type(min_int):"<<typeid(-2147483648).name()<<endl;
+cout<<"type(min_int):"<<typeid(min_int).name()<<endl;
+
+cout<<"type(max_int):"<<typeid(2147483647).name()<<endl;
+cout<<"type(max_int):"<<typeid(max_int).name()<<endl;
+int exced_right=2147483648;
+cout<<"exced right: "<<exced_right<<endl;
 
 
 
-
-
-
-        auto pp=78Ull;
 
 
         return 0;

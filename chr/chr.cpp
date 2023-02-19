@@ -1,8 +1,6 @@
 #include<iostream>
 #include<cstring>
-
 using namespace std;
-
 int main()
 {
     char message[] ="Hello world!";
@@ -12,7 +10,6 @@ int main()
     cout<<boolalpha;
     cout<<(message==msg)<<endl;//compare  addreesses
     char mes[14]="Hi bro!\n\0r";
-
     cout<<"mes:"<<mes<<endl;
     cout<<"strlen(mes):"<<strlen(mes)<<endl;
     mes[7]='M';
@@ -39,22 +36,19 @@ int main()
     cout<<"st="<<st<<endl;
     st=strstr(str,"are");
     cout<<"st="<<st<<endl;
-
     char tab[20];
     cout<<"Enter the string"<< endl;
     cin>>tab; //stop reading  in case of space
     cout<<"tab:"<<tab<<endl;
     /*in case of another reading function,if
-     the user enter previously chars after ' ',
-     they will be reading first*/
-
-
+    the user enter previously chars after ' ',
+    they will be reading first*/
     cout<<"Enter another string"<< endl;
     cin.getline(tab,10);
     cout<<"tab:"<<tab<<endl;
 
     string s,s2;
-     cout<<"Enter another string s"<< endl;
+    cout<<"Enter another string s"<< endl;
     getline(cin,s);
     cout<<"s:"<<s<<endl;
     cout<<"Enter another strings2"<< endl;

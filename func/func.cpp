@@ -11,8 +11,8 @@ int main(){
 
     int tab [3] [4] = { { 1, 2 } , { 3, 4, 5 } } ;
     int tab2 [3] [4] = { 1, 2 , 3, 4, 5 } ;
-    
-    
+
+
   /*cout<<"tab2[0][0]="<<tab2[0][0]<<endl;
   cout<<"tab2[0][1]="<<tab2[0][1]<<endl;
   cout<<"tab2[0][2]="<<tab2[0][2]<<endl;
@@ -25,7 +25,7 @@ int main(){
   cout<<"tab2[2][1]="<<tab2[2][1]<<endl;
   cout<<"tab2[2][2]="<<tab2[2][2]<<endl;
   cout<<"tab2[2][3]="<<tab2[2][3]<<endl;
-  
+
   cout<<"tab[0][0]="<<tab[0][0]<<endl;
   cout<<"tab[0][1]="<<tab[0][1]<<endl;
   cout<<"tab[0][2]="<<tab[0][2]<<endl;
@@ -50,7 +50,7 @@ int main(){
   cout<<"g="<<g<<endl;
   //cout<<typeid(decltype(a));
  // typedef int integer;
-  //integer j=44; 
+  //integer j=44;
    //cout<<"j="<<g<<endl;
    cout<<"type of g: "<<typeid(g).name()<<endl;
    cout<<"type of g: "<<typeid(a).name()<<endl;
