@@ -6,7 +6,7 @@
 
 ## Variables
 
-In any programming language, a variable is the identifier, the name of a memory space, a memory area of the computer, intended to store an information during the execution of a program. In C++ language, this information, called the value of the variable, has a specific type. It can be one of the built-in type we learned in the previous chapter(````int````, ````float````, ````double````, ````bool````,  etc) or much more. The information('s value) can change during the execution of the programm but it's type cannot change. Thus, C++ is said to be a statically typed language, meaning that the variable type cannot change during the execution of the programm, contrary to dynamically typed language such as Python where variables can change their type during the execution of the program.
+In any programming language, a variable is an unique identifier, a name of a memory space, a memory area of the computer, intended to store an information during the execution of a program. In C++ language, this information, called the value of the variable, has a specific type. It can be one of the built-in type we learned in the previous chapter(````int````, ````float````, ````double````, ````bool````,  etc) or much more. The information('s value) can change during the execution of the programm but it's type cannot change. Thus, C++ is said to be a statically typed language, meaning that the variable type cannot change during the execution of the programm, contrary to dynamically typed language such as Python where variables can change their type during the execution of the program.
 
 ## Declaration of variable in C++
 
@@ -34,6 +34,7 @@ int main()
 * A C++ vaiable identifier should not start with digit.
 * A C++ variable identifier should not be a C++ reserved word: C++ has several key word that should not be used as variable name.
 * A C++ variable identifier is case-sensitive.
+* A C++ variable identifier is unique: two variables should not have the same name.
 
 ### Examples of right variable names
 
@@ -56,8 +57,8 @@ letsgo
 |````2var````|start with digit(````2````)|
 |````my variable````|contains a space|
 |````mean%````|````%```` is a special character|
-|````série````|````é```` is an
-|````class````|reserved word|accentuated character|
+|````série````|````é```` is an accentuated character|
+|````class````|reserved word|
 |````AMPar1-````|````-```` is a special character|
 |````int````| reserved word|
 |````unsigned````| reserved word|
