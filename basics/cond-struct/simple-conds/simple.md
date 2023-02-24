@@ -6,11 +6,11 @@ We will learn about ````if```` conditional structure.
 
 ## ````if````
 
-The ````if```` conditional sstructure allow us to execute some instructions(lines of code) in case a condition is satified.
+The ````if```` conditional sstructure allows us to execute some instructions(lines of code) in case a condition is satified.
 
 ## ````if ... else````
 
-with else keyword we can execute some line(s)of code if a previous condition is not verified.
+With else keyword we can execute some line(s)of code if a previous condition is not verified.
 
 The  possible syntax are bellow:
 
@@ -30,11 +30,11 @@ if (expression)
 
 ````
 
-When we have ony one instruction, we are not obliged to enclore it in brackets. But if we hava more than one instrucrtion, we must enclose them in a bracket.
+When we have ony one instruction, we are not obliged to enclore it in brackets. But if we have more than one instrucrtion, we must enclose them in a bracket.
 
 ## ````if```` , ````else if````
 
-````else if```` allow to do specific task(s) when a condition is not satisfied but another is.
+````else if```` allows to do specific task(s) when a condition is not satisfied but another is.
 
 ## ````if```` , ````else if```` , ..., ````else````
 
