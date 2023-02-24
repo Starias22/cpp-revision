@@ -104,6 +104,9 @@ int main()
 * There must not be any ````else```` or ````else if```` without a previous if.
 * ````else if```` may or not be followed by ````else````.
 
+## Nested statments
+
 ## Resume
 
-C++ provides ````if````, ````else if````, and ````else```` statments to allow us to execute some instructions if and only if a condition is satisfied or not.
+* C++ provides ````if````, ````else if````, and ````else```` statments to allow us to execute some instructions if and only if a condition is satisfied or not.
+* ````if```` statements can be nested.
