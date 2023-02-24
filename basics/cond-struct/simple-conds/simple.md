@@ -101,9 +101,9 @@ int main()
 ## Remarks
 
 * ````if```` is independant, that is to say that ````else```` or ````else if```` is not required after if.
-* There is no ````else```` or ````else if```` without a previous if.
-* ````else if```` may or not be followed by ````else````
+* There must not be any ````else```` or ````else if```` without a previous if.
+* ````else if```` may or not be followed by ````else````.
 
 ## Resume
 
-C++ provides ````if, else if, and else```` statments to allow us to execute some instructions if and only if a condition is satisfied.
+C++ provides ````if````, ````else if````, and ````else```` statments to allow us to execute some instructions if and only if a condition is satisfied or not.
