@@ -1,23 +1,26 @@
 # Comments in C++
 
-### Overview
+## Overview
 
 In this chapter we will learn what are comments in C++ programming language, their usefulness and finally how to make them.
 
+## Comments in C++: Definition
 
-### Comments in C++: Definition
 In C++ as in many programming languages, comments are simply, lines of code that will be ignored by the compiler. A comment can be a sentence or phrase that explains a portion of the code of the programmer and that will not be compiled.
 
-### Usefulness of comments
+## Usefulness of comments
+
 Comments are very useful in C++ as in any programming language. With comments we can explain our code. That could be interesting for us when we come back later on the same code. Comments also facilitates collaborative programming and code maintainance.
 
+## Making comments in C++
 
-### Making comments in C++
 There are two options to make a comment in C++: single line and multiline comments.
+
 * A single line comment is a comment that occupies  a line. We use ````//```` to write a single line comment in C++. Single line comments start with ````//```` and continue until the end of the line.
 * A multiline comment is a comment that occupies one line or more. We use ````/**/```` to write a single line comment in C++. Multiline comments are enclosed between ````/*```` and ````*/````.
 
-#### Examples of comments in C++
+### Examples of comments in C++
+
 ````C++
 #include<iostream>
 using namespace std;
