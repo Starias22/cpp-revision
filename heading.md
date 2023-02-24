@@ -24,7 +24,11 @@
 
 ### Functions and scope of variables
 
-### Pointer and references
+### Pointers and references
+
+### Functions surdefinition
+
+### Multifile programming
 
 ### Arrays and matrixes
 
@@ -51,6 +55,8 @@
 ### Operator overloading
 
 ### Inheriatance
+
+### Exceptions in C++
 
 ### Template fucntions and classes
 
