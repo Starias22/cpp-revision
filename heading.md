@@ -12,7 +12,7 @@
 
 ### Variables
 
-### Strings ans special characters
+### Strings and special characters
 
 ### Operators
 
@@ -20,17 +20,17 @@
 
 ### Variable or value type casting
 
-### Functions
+### Functions basics
+
+### Functions and scope of variables
+
+### Pointer and references
 
 ### Arrays and matrixes
 
 ### Characters arrays and strings
 
 ### Input: error handling
-
-### Pointer and references
-
-### Variable scope
 
 ### Memory allocation
 

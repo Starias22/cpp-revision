@@ -263,11 +263,11 @@ int main()
 
 ## Constante variables in C++
 
-A constaant variable is a variable whose valueshould neccessary be assigned at declaration and can't be modified. In our programm, there may be variables which should not be re-assign. Then we can useconstantes to ensure their value is not modified (unconsciously for example)during the programm.
+A constaant variable is a variable whose valueshould neccessary be assigned at declaration and can't be modified. In our programm, there may be variables which should not be re-assigned. Then we can use constantes to ensure their value is not modified (unconsciously for example)during the programm.
 C++ provide two ways to declare constant variable:
 
 * Using the ````const```` keyword
-In that case, we use the ````const```` keyword followed by the type of the variable and then it identifier.
+In that case, we use the ````const```` keyword followed or precceded by the type of the variable and then it identifier.
 
 ## Examples: constant variables
 
