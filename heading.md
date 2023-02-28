@@ -64,10 +64,12 @@
 
 ### Inroduction to STL
 
-### Sequence containers
+### Containers
 
-## Associative containers
+#### Sequence containers
 
-### Unordered containers
+#### Associative containers
+
+#### Unordered containers
 
 ### Algorithms
