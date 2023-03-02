@@ -44,6 +44,18 @@
 
 ### Files
 
+## Useful
+
+### cmath
+
+### cstring
+
+### random
+
+### cmake
+
+### operating system
+
 ## Object-oriented programming
 
 ### Class: overview
@@ -54,7 +66,7 @@
 
 ### Operator overloading
 
-### Inheriatance
+### Inheritance
 
 ### Exceptions in C++
 
