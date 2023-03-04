@@ -22,6 +22,8 @@
 
 ### Functions basics
 
+### Characters and ASCII
+
 ### Functions and scope of variables
 
 ### Pointers and references
@@ -30,13 +32,17 @@
 
 ### Multifile programming
 
-### Arrays and matrixes
+### Introduction to arrays
 
-### Characters arrays and strings
+### Input and errors handling
 
-### Input: error handling
+### Multi-dimensional arrays
 
 ### Memory allocation
+
+#### Using C style
+
+#### Using C++ style
 
 ### Structs
 
@@ -45,6 +51,8 @@
 ### Files
 
 ## Useful
+
+### string
 
 ### cmath
 
@@ -55,6 +63,8 @@
 ### cmake
 
 ### operating system
+
+### Time
 
 ## Object-oriented programming
 
