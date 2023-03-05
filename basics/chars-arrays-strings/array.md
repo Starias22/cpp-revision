@@ -222,7 +222,7 @@ int main()
 strcpy(dest,src)
 ````
 
-copy the string from into dest.
+copy the string from src into dest.
 
 * dest must be a chars array identifier.
 * src is either a constante string or an identifier.
@@ -257,7 +257,7 @@ int main()
 strncpy(dest,src,max)
 ````
 
-Similar to strcpy but the number of characters to copy is at most max.
+Similar to strcpy but the number of characters to copy from is at most max.
 
 ````C++
 #include<iostream>
@@ -278,6 +278,17 @@ int main()
 ### strcat
 
 ````C++
+strcat(dest,src)
+````
+
+concat the string in src to dest.
+
+* dest must be a chars array identifier.
+* src is either a constante string or an identifier.
+* The  content of src is appended to the eventual content of dest.
+* The dest string must be so large to contain the src  resulting string, otherwise an error may occur during execution.
+
+````C++
 #include<iostream>
 #include<cstring>
 using namespace std;
@@ -295,9 +306,21 @@ int main()
 
 ### strncat
 
+````C++
+strncpy(dest,src,max)
+````
+
+Similar to strcat but the number of characters to append from src to dest is at most max.
+
 ### strcmp
 
 ### strncmp
+
+````C++
+strncmp(str1,str2,max)
+````
+
+Similar to strcmp but the number of chars to compare is at most max.
 
 ### strchr
 
@@ -305,6 +328,6 @@ int main()
 
 ## Resume
 
-* String can be represented as an array of characters.
+* String can be represented as an array of characters, where the last character is the end of line character.
 
 * The cstring library provides many functions that helpe easy manipulate string.
