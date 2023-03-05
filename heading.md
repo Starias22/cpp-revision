@@ -34,7 +34,9 @@
 
 ### Introduction to arrays
 
-### Input and errors handling
+### char arrays and cstring
+
+### string
 
 ### Multi-dimensional arrays
 
@@ -44,6 +46,8 @@
 
 #### Using C++ style
 
+### Input and errors handling
+
 ### Structs
 
 ### Lambda
@@ -52,17 +56,13 @@
 
 ## Useful
 
-### string
-
 ### cmath
 
-### cstring
-
-### random
+### Random
 
 ### cmake
 
-### operating system
+### Operating system
 
 ### Time
 

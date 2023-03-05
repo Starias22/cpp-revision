@@ -1,1 +1,0 @@
-# Characters , strings and arrays
