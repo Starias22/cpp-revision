@@ -92,6 +92,22 @@ int main()
 }
 ````
 
+We can base the exit condition from a loop, on the end of string character.
+
+````C++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    char str[]="It's a new horizon";
+    cout<<"str: "<<str<<endl;
+    for(auto ptr=str;*ptr!='\0';ptr++)
+        cout<<*ptr;
+    return 0;
+}
+````
+
 On the other hand, we don't need any loop to print a character array. We just need to use cout and the output stream operator.
 
 Moreover, printing a pointer of chars prints the matching string.
@@ -152,7 +168,7 @@ int main()
 
 We can make a casting from a pointer on char to void * to get the address of a string and then print it.
 
-### Examples: get the address of the first item
+#### Examples: get the address of the first item
 
 ````C++
 #include<iostream>
@@ -169,7 +185,44 @@ int main()
     cout<<"address of str: "<<(void*) tab<<endl;
 
     char *ptr=tab;
-    cout<<"addrss of tab: "<<(void*)ptr<<endl;
+    cout<<"address of tab: "<<(void*)ptr<<endl;
+
+    return 0;
+}
+````
+
+### const char*
+
+We can declare const array of array using the following syntaxes.
+
+````C++
+const char chr[10]="array";
+    cout<<"chr:"<<chr<<endl;
+
+    //chr[2]='A'; //error
+
+    cout<<"chr:"<<chr<<endl;
+    const char * str;
+    str="test";
+    cout<<"str:"<<str<<endl;
+
+    //*str=65;//error
+    cout<<"str:"<<str<<endl;
+
+````
+
+With both approach we cannot assign the items of the array, but only with the last approach we can modify entirely the array.
+
+When we initialize a string using the auto keyword, it's type is const char*.
+
+````C++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    auto tab ="Hello strength";
+    cout<<"typeof tab: "<<typeid().name()<<endl;
 
     return 0;
 }
@@ -183,7 +236,7 @@ The C progamming language provides a library called ````string```` to perform va
 #include<cstring>
 ````
 
-We are going to study some of the functions of that library in this section.
+We are going to study in this section some of the functions of that library, the most used.
 
 ### strlen
 
@@ -191,7 +244,7 @@ We are going to study some of the functions of that library in this section.
 strlen(str)
 ````
 
-Get the length of the array, whichis the number of characters before encountering an end of string character.
+Get the length of the array, which is the number of characters before encountering an end of string character.
 
 #### Examples of use: strlen
 
@@ -216,7 +269,9 @@ int main()
 }
 ````
 
-### strcpy
+### copy strings
+
+#### strcpy
 
 ````C++
 strcpy(dest,src)
@@ -251,11 +306,13 @@ int main()
 }
 ````
 
-### strncpy
+#### strncpy
 
 ````C++
 strncpy(dest,src,max)
 ````
+
+Copies at most max characters of src to dest.
 
 Similar to strcpy but the number of characters to copy from is at most max.
 
@@ -275,7 +332,9 @@ int main()
 }
 ````
 
-### strcat
+### concat strings
+
+#### strcat
 
 ````C++
 strcat(dest,src)
@@ -286,48 +345,235 @@ concat the string in src to dest.
 * dest must be a chars array identifier.
 * src is either a constante string or an identifier.
 * The  content of src is appended to the eventual content of dest.
-* The dest string must be so large to contain the src  resulting string, otherwise an error may occur during execution.
+* The dest string must be so large to contain the string that results from the concatenation, otherwise an error may occur during execution.
 
 ````C++
 #include<iostream>
 #include<cstring>
 using namespace std;
 
+
 int main()
 {
+    char greet[]="Hello";
     char example[10];
-    strncpy(example,"newst",5);
+    strcat(example,"example");
+    cout<<"strlen(example) :"<<strlen(example)<<endl;
+    cout<<"example: "<<example<<endl;
+    strcat(example,"se");
+    cout<<"strlen(example) :"<<strlen(example)<<endl;
+
     cout<<"example(after): "<<example<<endl;
-    strncpy(example,"new",5);
-    cout<<"example(after): "<<example<<endl;
+    /*wrong: execution error*/
+    strcat("lglg",example);
+    strcat(example,"morelarger");
     return 0;
 }
 ````
 
-### strncat
+#### strncat
 
 ````C++
-strncpy(dest,src,max)
+strncat(dest,src,max)
 ````
+
+Concats at most max characters of src to dest.
 
 Similar to strcat but the number of characters to append from src to dest is at most max.
 
-### strcmp
+````C++
+#include<iostream>
+#include<cstring>
+using namespace std;
 
-### strncmp
+
+int main()
+{
+    char greet[]="Hello ";
+    char world[]="worlds!";
+    cout<<"greeting: "<<great
+    <<"worlds: "<<worlds<<endl;
+    char str[20];
+    cout<<"str: "<<str;
+    strcpy(str,greet);
+    cout<<"str(after copy):"<<str;
+
+    strncat(str,world,5);
+    cout<<"str(after concat): "<<str;
+    return 0;
+}
+````
+
+### strings comparison
+
+#### strcmp
+
+````C++
+strncmp(str1,str2)
+````
+
+Compares lexicographically str1 an str2, based on the ASCII code of each character of each one of str1 and str2; returns:
+
+* 0 if str1 and str2 are equal
+* a positive integer if str1 is greater than str2
+* a negative integer if str1 is less than str2.
+
+str1 and str2 may be a string identifer or a constant string.
+
+#### strncmp
 
 ````C++
 strncmp(str1,str2,max)
 ````
 
+compares at most max characters of str1 an str2.
+
 Similar to strcmp but the number of chars to compare is at most max.
 
-### strchr
+#### strcasecmp
 
-### strstr
+````C++
+strcasecmp(str1,str2)
+````
+
+Compares str1 and str2 ignoring case.
+
+Similar to strcmp but case is ignored.
+
+#### strncasecmp
+
+````C++
+strncasecmp(str1,str2,max)
+````
+
+Compares at most max characters of str1 and str2, ignoring case.
+
+Similar to :
+
+* strcasecmp but at most max characters are compared
+* strncmp but case is ignored.
+
+#### Examples: comparison of strings
+
+````C++
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+    int n=strcmp("Bmstrong","amstrong");
+    cout<<"n="<<n<<endl;
+
+    n=strcmp("HELLO","HELLO");
+    cout<<"n="<<n<<endl;
+
+    n=strcmp("hello","HELLO");
+    cout<<"n="<<n<<endl;
+
+    n=strncmp("hello","hello4",5);
+    cout<<"n="<<n<<endl;
+
+    n=strcasecmp("heLlo","HElLO");
+    cout<<"n="<<n<<endl;
+
+    n=strcmp("hello","hello5");
+    cout<<"n="<<n<<endl;
+
+    return 0;
+}
+````
+
+### Search in string
+
+#### strchr
+
+````C++
+strchr(str,chr)
+````
+
+search the first occurence of chrin str.
+
+#### strrchr
+
+````C++
+strrchr(str,chr)
+````
+
+search the last occurence of chr in str.
+
+Similar to strchr but the search starts from the end of str.
+
+#### strstr
+
+````C++
+strchr(str1,str2)
+````
+
+search the first occurence of str2 in str1.
+
+#### strrstr
+
+````C++
+strrstr(str1,str2)
+````
+
+search the last occurence of str2 in str1.
+
+Similar to strstr but the search starts from the end of str1.
+
+#### strcasestr
+
+````C++
+strcasestr(str1,str2)
+````
+
+Search str2 in str1, ignoring case.
+
+Similar to strstr but case is ignore.
+
+For both of these functions, both arguments can be constant(string or character) or variable(char* or char) identifier.
+
+Both these functions functions return null pointer if the motif is not found and a read-only pointer on the first occurence of the motif in the first string if it's found. Consequently, the original string cannot be directly  modified via a pointer returned by these function.
+
+#### Examples: search in string
+
+````C++
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+    //cout<<"Hello gys\n";
+    char  hello[10]="Hello";
+    cout<<"hello:"<<hello<<endl;
+    char const * x=NULL;
+    x=strchr(hello,'e');
+    const char *y;
+    y=strchr("Hello",'E');
+
+    cout<<"addr(x):"<<(void*)x<<endl;
+    cout<<"adr(y):"<<(void*)y<<endl;
+
+    cout<<"x:"<<x<<endl;
+    //cout<<"y:"<<y;
+    if(y==NULL)//or nullptr
+    cout<<"y is nullptr\n";
+   //*x='E';//error
+   char *ptr=(char*)x;
+   *ptr='E';
+    cout<<"x:"<<x<<endl;
+    cout<<"hello:"<<hello<<endl;
+
+    return 0;
+}
+````
+
+In the case the first string passed to them is a string identifier, casting can be made to modify it via the returned pointer.
+
+#### Examples: modify after casting
 
 ## Resume
 
 * String can be represented as an array of characters, where the last character is the end of line character.
 
-* The cstring library provides many functions that helpe easy manipulate string.
+* The cstring library provides many functions that help to easy manipulate string.

@@ -376,6 +376,47 @@ Array formalism|Pointer formalism|
 |````&tab[0]````|````tab````|
 |````&ptr[i]````|````ptr+i````|
 
+## Constant arrays
+
+Similary to constant variables, constant arrays are those whicn are meant for read only and shouldn't be modified. Then, they cannot be declared uinitialized.
+
+Their pointer should be read-only, but contrary to simple constant variables, ordinary pointers can be sued to modify their items.
+
+````C++
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+    const int tab[]={10,9,8,5,4};
+    const int tab2[5]{};
+
+    /*error tab3 is not initialized*/
+    //const int tab3[5];
+
+    for(auto i=0;i<5;i++)
+    {
+        cout<<"tab["<<i<<"]="<<tab[i]<<endl;
+        cout<<"tab2["<<i<<"]="<<tab2[i]<<endl;
+
+    }
+  //tab[2]=8;
+/*an only-readable pointer(const*)*/
+    auto pt=tab;
+    int * ptr=(int*)tab;
+    *(ptr+3)=40;
+    *ptr=45;
+    cout<<tab[0]<<endl;
+
+    cout<<tab[3]<<endl;
+
+
+    return 0;
+
+}
+````
+
 ## Arrays and functions
 
 ### Array passing to function as argument

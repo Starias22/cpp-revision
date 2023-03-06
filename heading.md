@@ -28,7 +28,7 @@
 
 ### Pointers and references
 
-### Functions surdefinition
+### Functions surdefining
 
 ### Multifile programming
 
@@ -36,13 +36,13 @@
 
 ### char arrays and cstring
 
-### string
+### Two dimensional arrays
 
 ### Multi-dimensional arrays
 
 ### Memory allocation
 
-#### Using C style
+#### Using cstdlib
 
 #### Using C++ style
 
@@ -60,11 +60,11 @@
 
 ### Random
 
-### cmake
-
 ### Operating system
 
 ### Time
+
+### cmake
 
 ## Object-oriented programming
 

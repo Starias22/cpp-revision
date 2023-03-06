@@ -1,4 +1,10 @@
 #include<iostream>
+#include<cstdlib>
+/*malloc
+calloc
+realloc*/
+
+
 //#include<typeinfo>
 using namespace std;
 typedef float real;

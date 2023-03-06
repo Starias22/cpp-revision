@@ -41,8 +41,5 @@ int main()
     cin>>num;
     cout<<"Your mumber: "<<num<<"\n";
 
-
-
-
     return 0;
 }

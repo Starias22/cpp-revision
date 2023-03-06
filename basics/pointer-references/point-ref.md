@@ -157,9 +157,32 @@ As pointers are variables, they can be re-assigned.
 
 Moreover, we can use a pointer to access(read and assign) the variable on which it points: this is done via the dererencement operator(*). The concerned pointer is so said to be deferenced.
 
-Pointer derencing means access to the variable pointed by the concerned pointer.
+Pointer derencing means access to the variable pointed by the concerned pointer, either to read or to modify.
 
 #### Examples: Deferencement
+
+````C++
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=10;
+    int *ptr=&a;
+
+    cout<<"*ptr: "<<*ptr<<endl;
+    cout<<"a: "<<*a<<endl;
+    a++;
+
+    cout<<"*ptr: "<<*ptr<<endl;
+    cout<<"a: "<<*a<<endl;
+
+    *ptr=-20;//modify a
+    cout<<"*ptr: "<<*ptr<<endl;
+    cout<<"a: "<<*a<<endl;
+
+    return 0;
+}
+````
 
 #### Remarks
 
@@ -259,6 +282,118 @@ int main()
 
     return 0;
 }
+````
+
+### Read-only pointers
+
+Read-only  or constant pointers are those which are only readable. These pointers are deferencable only for read, not for update. That's to say we cannot change the value of the variable pointed by these pointers, using them. But we can re-assign them.
+
+To declare a read-only pointer, we need to declare them constant, by preceeding or succeeding their identifier by const keyword
+
+#### Example:Read only pointers
+
+````C++
+#include<iostream>
+using namespace std;
+
+int main()
+{   int a=10;
+    int b=40;
+    const int *ptr=&a;
+    cout<<"a: "<<*ptr<<endl;
+    //ptr re-assigned: ptr points on b
+    ptr=&b;
+    cout<<"b: "<<*ptr<<endl;
+    *ptr=45;//error ptr is for read only
+    cout<<"typeof ptr: "<<typeid(ptr).name()<<endl;
+    return 0;
+}
+````
+
+Let's notice once again that the const or read-only qualifier doesn't mean that these pointers are not re-assignable, but that they cannot be used to assign the variable they point one.
+
+#### Read-only pointer casting to usual pointer
+
+A const pointer cannot be implicitly cast to ordinary pointer via assignation.
+
+````C++
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a=8;
+    const int *ptr=&a;
+    /*compiling error will occur*/
+    int *pt=ptr;
+    return 0;
+}
+````
+
+We can cast a constante pointer to usal pointer. Then we can assign the variable pointed by the first pointer(the one casted) via the pointer that results from the casting.
+
+That cast is not allowed with static_cast.
+
+````C++
+#include<iostream>
+using namespace std;
+
+int main()
+{  int b=40;
+    const int *ptr=&b;
+    cout<<"b: "<<*ptr<<endl;
+    int * pt=(int *)ptr;/*non const pointer*/
+    cout<<"typeof pt: "<<typeid(pt).name()<<endl;
+    *pt=-102;
+    cout<<"b: "<<b<<endl;
+
+    char ch='a';
+    char const *pcc=&ch;
+
+    //auto pc=static_cast<char*>(pcc);
+ /*compiling error: not allowed*/
+    return 0;
+}
+````
+
+### Pointers on constant variables
+
+Since constant variables are not meant to be modified, but for read-only, their pointers should be read-only and then cannot be use to modify these variables.
+
+Moreover, even with casting to ordinary pointers, we cannot modify them.
+
+### Examples: Pointers on constant variables
+
+````C++
+#include<iostream>
+using namespace std;
+
+int main()
+{   int const a=20;
+    auto ptr=&a;
+    cout<<"typeof ptr: "<<typeid(ptr).name()<<endl;
+    if(typeid(ptr)==typeid(const int*))
+        cout<<"ptr is for read-only\n";
+    //*ptr=20;//error ptr is read-only
+
+    // int *pt=&a;//error &a is read-only
+
+    int *q=(int*)ptr;
+    int *r=(int*)&a;
+    cout<<"q: "<<q<<endl;
+    cout<<"r: "<<r<<endl;
+    cout<<"ptr: "<<ptr<<endl;
+
+
+    *q=90;
+    cout<<"a after: "<<a<<endl;
+
+    *r=-90;
+    cout<<"a after: "<<a<<endl;
+    return 0;
+}
+````
+
+````C++
 ````
 
 ## References
@@ -395,7 +530,6 @@ By calling the function ````change```` like that, the formal parameter ````ref``
 
  The value of the variable ````var```` is so effectively modified by the function ````change````.
 
-
 #### Variables swaping using referencess
 
 ````C++
@@ -440,5 +574,6 @@ Overall:
 
 * Address is an unique integer that identify each variable declared in a programm.
 * Pointers are variables that contains the address of another.
+* A read-only pointer is re-assignable but cannot be used to change the value of the variable it points on. It can be casted to usual pointer.
 * References are variables that refer to another of the same type and that allows to access the same memory space in differents ways.
 * Accordinly to what we have to do, we can pass a value, an address or a reference to a function.

@@ -2,7 +2,16 @@
     "files.associations": {
         "*.rmd": "markdown",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cwchar": "cpp",
+        "exception": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "type_traits": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
