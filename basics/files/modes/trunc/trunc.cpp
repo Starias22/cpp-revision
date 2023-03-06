@@ -11,6 +11,7 @@ int main()
     if(ost)
     {
         cout<<"opened!"<<endl;
+        ost.seekp(0);
     }
     else
         cout<<"Not opened\n";

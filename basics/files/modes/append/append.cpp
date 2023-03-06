@@ -6,7 +6,7 @@ int main()
 {   //append writing mode
     //the file can exist or not
     /*in case of existence all the eventual new content
-     is added at the end of the file*/
+    is added at the end of the file*/
     ofstream file("apppend.txt",ios::app);
     ifstream fic("app.txt",ios::app);
 

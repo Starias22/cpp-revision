@@ -106,7 +106,7 @@ Test that code with different inputs, for examples:
 * 9.2g
 * 8556987459
 
-Now complete the code to get the one bellow; exute it with differents inputs too.
+Now complete the code to get the one bellow; execute it with differents inputs too.
 
 ### Example
 
@@ -242,18 +242,9 @@ int main()
 }
 ````
 
-cin can also be used to get a single character. We use in that case the ollowing syntax:
-
-````C++
-cin.get(ch)
-````
-
-where ch represents the character to get the input in.
-
 ### Examples: read a character
 
 ````C++
-
 #include<iostream>
 using namespace std;
 

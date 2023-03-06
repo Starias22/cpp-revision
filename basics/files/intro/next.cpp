@@ -49,5 +49,5 @@ int main()
     else
     cout<<"The file is not opened\n";
 
-   return 0;
+    return 0;
 }

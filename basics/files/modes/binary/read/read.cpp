@@ -9,7 +9,7 @@ using namespace std;
 struct player{
     int num;
     //string name;
-   char name[STR];
+    char name[STR];
     int score;
     bool is_young;
 
@@ -52,7 +52,7 @@ int main()
             cout<<"Score: "<<(tab+i)->score<<endl;
             cout<<"Is young?: "<<(tab+i)->is_young<<endl<<endl;
 
-       }
+    }
 
         return 0 ;
 

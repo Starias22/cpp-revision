@@ -66,7 +66,9 @@
 
 ### cmake
 
-## Object-oriented programming
+## Object-oriented programming(OOP)
+
+### Introduction to OOP
 
 ### Class: overview
 
@@ -80,7 +82,7 @@
 
 ### Exceptions in C++
 
-### Template fucntions and classes
+### Template functions and classes
 
 ### Namespaces
 

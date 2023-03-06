@@ -29,5 +29,9 @@ int main()
     file>>word;
     cout<<"backward word:"<<word<<endl;
 
+    if(file.tellg()==ios::end)
+        cout<<"End of file reached\n";
+    else
+      cout<<"End of file not reached\n";
     file.close();
     }
