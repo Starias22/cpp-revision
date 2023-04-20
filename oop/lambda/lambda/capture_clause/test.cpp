@@ -3,9 +3,6 @@
 #include <algorithm>
 #include <array>
 
-
-
-
 using namespace std;
 int main()
 
@@ -20,16 +17,14 @@ int var=45;
             //cout<<"a="<<a<<endl;
             //cout<<"var="<<var<<endl; var is not captured yet
 
-
-
     };
 
 
     //capture par valeur
 // auto ::: non dynamique
      auto lam= [var] {
-            cout<<"var="<<var<<endl; 
-    
+            cout<<"var="<<var<<endl;
+
     };
 
     lam();
@@ -41,7 +36,7 @@ int var=45;
             //var--;
             //var=20;
             //var*=2;
-    
+
     };
 
     lam();
@@ -56,10 +51,10 @@ int var=45;
     char c='A';
 
     auto y=[&var]{
-        cout<<"var="<<var<< endl;
+      cout<<"var="<<var<< endl;
 
-        var*=100;
-        cout<<"var="<<var<< endl;
+      var*=100;
+      cout<<"var="<<var<< endl;
 
 
     };
@@ -108,7 +103,7 @@ auto m=[&var,&c,&k]{
         cout<<"c="<<c<< endl;
         cout<<"k="<<k<< endl;
         //cout<<"j="<<j<< endl; error
- 
+
      };
      p();
 
@@ -124,7 +119,7 @@ auto q=[&]{
         k++;
         var++;
         j++;
- 
+
      };
 
      auto r=[&,var]{
@@ -137,7 +132,7 @@ auto q=[&]{
 
         //seuls var et k
         k++;
-    
+
         //var++;  error
      };
 
@@ -147,7 +142,7 @@ auto q=[&]{
         //var++;  error
      };*/  //error
 
-     
+
 
     vector<int> tab{1,10,15,20,11,44,22,36,8,4,2};
 
@@ -163,7 +158,7 @@ auto q=[&]{
         return num%2!=0;
 
     }) ;
-    
+
 
     cout <<"Ce tableau contient "<<cpt_even<<"nombres pairs et "<<cpt_odd<<" nombres impairs\n";
 
@@ -185,7 +180,7 @@ auto q=[&]{
 cout << "Message reçu : " << message << endl;
 });
 
-/*for_each exécute l'instruction du lambda qu'elle prend en argument sur chacun des 
+/*for_each exécute l'instruction du lambda qu'elle prend en argument sur chacun des
 éléments du tableau dynamique dont les pointeurs lui sont passés en premiers arguments*/
 
  array<double, 4/*u*/> tableau { 1, 3.1415, 2.1878, 1.5 };

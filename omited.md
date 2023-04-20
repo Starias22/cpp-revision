@@ -1,5 +1,6 @@
 # Omited notions
 
+* nested ifs and loops
 * goto
 * ternary operator
 * scope of var inside loops
@@ -10,3 +11,4 @@
   * read a file(cin, operators,get,getline,hanle errors)
   * both read and write with file
   * file mode combination
+* input error: buffer and summary

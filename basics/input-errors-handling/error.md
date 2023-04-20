@@ -21,7 +21,7 @@ int main()
 
 ## States of cin
 
-cin is an object of the istream class in C++ that is used to read input from the user or from a file. The istream class has several member functions that can be used to check the status of the input stream. These member functions include good(), bad(), fail(), and eof().
+cin(stands for console input) is an object of the iostream class in C++, that is used to read input from the console. The istream class has several member functions that can be used to check the status of the input stream. These member functions include good(), bad(), fail(), and eof().
 
 * good() function: It returns true if the input stream is in a good state, which means that there are no errors and the end-of-file (EOF) has not been reached.
 
@@ -173,8 +173,6 @@ That can be used with getline too.
 
 getline is used to get a line. It can be used with string or characters array.
 
-In case of string, we already know that it takes as first parameter, the input stream(cin), as second parameter the string or array of characters. The third parameter is optional and is the seperator.
-
 ### Example:getline in string
 
 ````C++
@@ -201,14 +199,6 @@ int main()
     return 0;
 }
 ````
-
-In case of characters array, the syntax is bellow:
-
-````C++
-cin.getline(array,max,sep)
-````
-
-where max represents the maximum number of characters to get, array the chars array, sep an optional parameter which is the seperator.
 
 ### Example: getline in characters array
 

@@ -8,7 +8,7 @@ int main()
 {
 
     /*de même  qu'on peut laisser le compilateur deviner le type de retour de nos lambdas,
-     on peut le laiseer deviner le type des parametre grace a auto */ 
+     on peut le laiseer deviner le type des parametre grace a auto */
 
 
      auto my_lambda= [](auto var){
@@ -28,7 +28,7 @@ int main()
      };
      cout<<"product(4,20)="<<product(4,20)<<endl;
       cout<<"product(4,2.55)="<<product(4,2.55)<<endl;
-      
+
 
 
 

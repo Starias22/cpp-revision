@@ -28,7 +28,6 @@ int main()
     cin.get(ch);
 
     cout<<"ch: "<<ch;
-
     cin.get();
     return 0;
 }

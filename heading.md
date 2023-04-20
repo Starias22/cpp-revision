@@ -50,8 +50,6 @@
 
 ### Structs
 
-### Lambda
-
 ### Files
 
 ## Useful
@@ -86,14 +84,18 @@
 
 ### Namespaces
 
-### Inroduction to STL
+### Lambda
 
-### Containers
+### STL
 
-#### Sequence containers
+#### Inroduction to STL
 
-#### Associative containers
+#### Containers
 
-#### Unordered containers
+##### Sequence containers
 
-### Algorithms
+##### Associative containers
+
+##### Unordered containers
+
+#### Algorithms
