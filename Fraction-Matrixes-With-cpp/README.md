@@ -1,0 +1,1 @@
+This project provides a c++ module to manage matrixes of fractions.
